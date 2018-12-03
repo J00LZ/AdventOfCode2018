@@ -1,9 +1,11 @@
 package nl.voidcorp.aoc
 
 class Day3 : DayBase(3) {
-    override fun part1(list: List<String>): String {
-        val items = list.map { Item.new(it) }
-        val arr = MutableList(1000) { MutableList(1000) { 0 } }
+
+    val arr = MutableList(1000) { MutableList(1000) { 0 } }
+    val items = list.map { Item.new(it) }
+    override fun part1(): String {
+
         for (item in items) {
 
             for (x in item.x until item.coords.first+item.x) {
@@ -27,18 +29,7 @@ class Day3 : DayBase(3) {
         return count.toString()
     }
 
-    override fun part2(list: List<String>): String {
-        val items = list.map { Item.new(it) }
-        val arr = MutableList(1000) { MutableList(1000) { 0 } }
-        for (item in items) {
-
-            for (x in item.x until item.coords.first+item.x) {
-                for (y in item.y until item.coords.second+item.y) {
-                    arr[y][x] += 1
-                    //println("$x,$y=${arr[y][x]}")
-                }
-            }
-        }
+    override fun part2(): String {
 
         for (item in items) {
             var isbig=0

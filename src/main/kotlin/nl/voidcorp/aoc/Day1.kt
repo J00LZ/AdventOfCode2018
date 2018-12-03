@@ -1,13 +1,16 @@
 package nl.voidcorp.aoc
 
 class Day1 : DayBase(1) {
-    override fun part1(list: List<String>) = list.map { it.toLong() }.sum().toString()
+    val longs = list.map { it.toLong() }
+    val seen = mutableListOf<Long>(0).toHashSet()
 
-    override fun part2(list: List<String>): String {
+    override fun part1() = longs.sum().toString()
+
+    override fun part2(): String {
+        //return 219.toString()
         var count = 0L
-        val seen = mutableListOf<Long>(0)
         while (true) {
-            list.map { it.toLong() }.forEach {
+            longs.forEach {
                 count += it
                 if (seen.contains(count)) {
                     return count.toString()
@@ -15,6 +18,7 @@ class Day1 : DayBase(1) {
                 seen += count
             }
         }
+
     }
 
 }

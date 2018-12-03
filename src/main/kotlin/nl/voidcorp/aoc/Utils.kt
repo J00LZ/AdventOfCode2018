@@ -23,3 +23,16 @@ fun getText(day: Int): List<String> {
     return data
     //return FileReader("data/day$day.txt").readLines()
 }
+
+/*val day2 = DayBase(2, { TODO("NYE") }) {
+    TODO("NYE")
+}
+
+fun DayBase(
+    date: Int,
+    part1: (List<String>) -> String,
+    part2: (List<String>) -> String
+) = object : DayBase(date) {
+    override fun part1(list: List<String>): String = part1(list)
+    override fun part2(list: List<String>): String = part2(list)
+}*/
