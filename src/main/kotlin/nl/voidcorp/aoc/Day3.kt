@@ -1,6 +1,6 @@
 package nl.voidcorp.aoc
 
-class Day3 : DayBase(3) {
+object Day3 : DayBase(3) {
 
     val arr = MutableList(1000) { MutableList(1000) { 0 } }
     val items = list.map { Item.new(it) }

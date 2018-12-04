@@ -1,6 +1,6 @@
 package nl.voidcorp.aoc
 
-class Day2 : DayBase(2) {
+object Day2 : DayBase(2) {
     override fun part1(): String {
         var twice = 0
         var trice = 0

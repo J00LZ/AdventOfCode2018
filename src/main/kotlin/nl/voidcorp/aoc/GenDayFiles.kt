@@ -2,7 +2,7 @@ package nl.voidcorp.aoc
 
 
 fun main(args: Array<String>) {
-    val map = listOf(Day1(),Day2(),Day3())
+    val map = listOf(Day1,Day2,Day3,Day4)
     /*val date = GregorianCalendar(Locale.forLanguageTag("NL-nl"))[GregorianCalendar.DAY_OF_MONTH]
     val b = Class.forName("nl.voidcorp.aoc.Day$date") as Class<DayBase>
     val c = b.getConstructor().newInstance()

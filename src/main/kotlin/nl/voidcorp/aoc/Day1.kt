@@ -1,6 +1,6 @@
 package nl.voidcorp.aoc
 
-class Day1 : DayBase(1) {
+object Day1 : DayBase(1) {
     val longs = list.map { it.toLong() }
     val seen = mutableListOf<Long>(0).toHashSet()
 
