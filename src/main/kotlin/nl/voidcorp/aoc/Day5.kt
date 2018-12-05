@@ -12,16 +12,16 @@ object Day5 : DayBase(5) {
     }
 
     override fun part2(): String {
-        val aa = mutableListOf<Char>().apply { addAll(str) }
+        val aa = str.toMutableList()
 
-        val bb = mutableListOf<Char>().apply { addAll(str) }
-        val cc = mutableListOf<Char>().apply { addAll(str) }
-        val dd = mutableListOf<Char>().apply { addAll(str) }
+        val bb = str.toMutableList()
+        val cc = str.toMutableList()
+        val dd = str.toMutableList()
         aa.removeIf { it == 'a' || it == 'A' }
         bb.removeIf { it == 'b' || it == 'B' }
         cc.removeIf { it == 'c' || it == 'C' }
         dd.removeIf { it == 'd' || it == 'D' }
-        return mutableListOf(reacc(aa), reacc(bb), reacc(cc), reacc(dd)).toString()
+        return mutableListOf(reacc(aa), reacc(bb), reacc(cc), reacc(dd)).min().toString()
     }
 
     fun reacc(polymer: MutableList<Char>): Int {
